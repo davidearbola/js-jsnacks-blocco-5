@@ -152,3 +152,18 @@ function calcolaPeso(array, proprietà) {
 	});
 	return risultato;
 }
+
+// //**************************** SNACK 3 ***************************************//
+// Scrivi una funzione che accetti una stringa come argomento e la ritorni
+// girata (es. Ciao -> oaiC)
+let stringa = "bellodezio";
+console.log("Questa è la stringa di partenza: " + stringa);
+let nuovaStringa = invertiStringa(stringa);
+console.log("Javascript risponde: " + nuovaStringa);
+
+function invertiStringa(str) {
+	let arrayStr = str.split("");
+	let reverseStr = arrayStr.reverse();
+	let nuovaStr = reverseStr.join("");
+	return nuovaStr;
+}
