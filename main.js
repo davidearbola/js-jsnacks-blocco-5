@@ -167,3 +167,23 @@ function invertiStringa(str) {
 	let nuovaStr = reverseStr.join("");
 	return nuovaStr;
 }
+
+// //**************************** SNACK 4 ***************************************//
+// Scrivi una funzione che fonda due array (aventi lo stesso numero di
+// elementi) prendendo alternativamente gli elementi da uno e dall’altro
+// es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+let arrayLett = ["a", "b", "c", "d", "e"];
+let arrayNumb = [1, 2, 3, 4, 5];
+let nuovoArray = fondiArray(arrayLett, arrayNumb);
+console.log("Primo Array: ", arrayLett);
+console.log("Secondo Array: ", arrayNumb);
+console.log("Nuovo Array: ", nuovoArray);
+
+function fondiArray(array1, array2) {
+	let arrayFuso = [];
+	for (let i = 0; i < array1.length; i++) {
+		arrayFuso.push(array1[i]);
+		arrayFuso.push(array2[i]);
+	}
+	return arrayFuso;
+}
