@@ -187,3 +187,25 @@ function fondiArray(array1, array2) {
 	}
 	return arrayFuso;
 }
+
+// //**************************** SNACK 5 ***************************************//
+// Scrivi una funzione che accetti tre argomenti:
+// un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo
+// quanto il numero di elementi dell’array).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione
+// compresa tra “a” e “b”
+
+let arr = ["davide", "luca", "giuseppe", "nicolas", "matteo"];
+let a = 0;
+let b = 0;
+let nuovoArr = iniettaArray(arr, a, b);
+console.log(nuovoArr);
+
+function iniettaArray(array, numeroA, numeroB) {
+	numeroB = Math.floor(Math.random() * array.length);
+	numeroA = Math.floor(Math.random() * numeroB - 1);
+	let diff = numeroB - numeroA;
+	let nuovoArray = array;
+	nuovoArray.splice(diff, 0, numeroA, numeroB);
+	return nuovoArray;
+}
